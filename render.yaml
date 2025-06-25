@@ -2,8 +2,8 @@ services:
   - type: web
     name: seedsync-backend
     env: docker
-    rootDir: backend                # Points to the folder where Dockerfile is
-    dockerfilePath: backend/Dockerfile
+    rootDir: backend
+    dockerfilePath: Dockerfile
     plan: free
     region: oregon
     autoDeploy: true
