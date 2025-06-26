@@ -10,10 +10,13 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy backend code
 COPY backend/ ./backend
 
-# Create uploads dir if used for static files
+# Add uploads folder for static files
 RUN mkdir -p /app/backend/uploads
 
-# Expose FastAPI port
+# Let Python treat backend as top-level module
+ENV PYTHONPATH=/app
+
+# Expose port
 EXPOSE 8000
 
 # Run app
